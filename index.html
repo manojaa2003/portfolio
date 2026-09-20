@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Manoj A A — ML & GenAI Engineer</title>
+<title>Manoj A A — AI/GenAI Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -408,6 +408,9 @@
 
   .tag.accent { border-color: rgba(124,107,255,0.4); color: var(--accent); background: rgba(124,107,255,0.08); }
   .tag.teal { border-color: rgba(0,217,192,0.4); color: var(--accent2); background: rgba(0,217,192,0.08); }
+  .tag.coral { border-color: rgba(255,107,107,0.4); color: var(--accent3); background: rgba(255,107,107,0.08); }
+  .tag.gold { border-color: rgba(255,200,100,0.4); color: #ffc864; background: rgba(255,200,100,0.08); }
+  .tag.slate { border-color: rgba(150,150,200,0.4); color: #a4a4c1; background: rgba(150,150,200,0.08); }
 
   /* EXPERIENCE */
   #experience { background: var(--bg); }
@@ -417,9 +420,10 @@
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 40px;
-    max-width: 800px;
+    max-width: 100%;
     position: relative;
     overflow: hidden;
+    margin-bottom: 32px;
   }
 
   .exp-card::before {
@@ -537,7 +541,7 @@
   .project-card:hover::after { opacity: 1; }
 
   .project-card.featured {
-    grid-column: span 2;
+    grid-column: 1 / -1;
     background: linear-gradient(135deg, #13131c, #16162a);
   }
 
@@ -607,6 +611,12 @@
     border-radius: 3px;
   }
 
+  .project-link-container {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+  }
+
   .project-link {
     display: inline-flex;
     align-items: center;
@@ -614,7 +624,6 @@
     color: var(--accent);
     font-size: 12px;
     text-decoration: none;
-    margin-top: auto;
     transition: gap 0.2s;
   }
 
@@ -648,6 +657,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+  }
+
+  a.cert-card {
+    text-decoration: none;
   }
 
   .cert-card {
@@ -849,9 +862,17 @@
     .hero-stats { grid-template-columns: 1fr 1fr; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .projects-grid { grid-template-columns: 1fr; }
-    .project-card.featured { grid-column: span 1; }
     .certs-grid { grid-template-columns: 1fr 1fr; }
     .edu-card { flex-direction: column; }
+  }
+
+  @media (max-width: 600px) {
+    .certs-grid { 
+      grid-template-columns: 1fr; 
+    }
+    .hero-stats { 
+      grid-template-columns: 1fr; 
+    }
   }
 </style>
 </head>
@@ -894,9 +915,8 @@
       <img src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/profile-images/538004/698c970b3ff04/57a438a3ad.jpg" alt="Manoj A A" />
     </div>
     <div class="hero-ctas">
-      <a href="mailto:aamanoj743@gmail.com?" 
-   class="btn-primary">↗ Get in touch</a>
-      <a href="https://drive.google.com/uc?export=download&id=1Ijt5yJtTEYJvjLIJGMHEA-7dBdRdEUY_" download class="btn-primary">⬇ Resume</a>
+      <a href="mailto:aamanoj743@gmail.com" class="btn-primary">↗ Get in touch</a>
+      <a href="https://drive.google.com/uc?export=download&id=1EgS8eXoUb-4FbaiMYJMPW1lmssglb61Z" download class="btn-primary">⬇ Resume</a>
       <a href="https://github.com/manojaa2003" target="_blank" class="btn-secondary">⌥ GitHub</a>
       <a href="https://www.linkedin.com/in/manoj-a-a-659879293/" target="_blank" class="btn-secondary">in LinkedIn</a>
     </div>
@@ -907,7 +927,7 @@
       </div>
       <div>
         <div class="stat-num">3<span>+</span></div>
-        <div class="stat-label">Deployed Applications</div>
+        <div class="stat-label">Deployed Apps</div>
       </div>
       <div>
         <div class="stat-num">2<span></span></div>
@@ -953,40 +973,72 @@
     </p>
     </div>
     <div class="about-skills">
-      <h3>GenAI & NLP</h3>
+      <h3>Generative AI &amp; LLM</h3>
       <div class="skill-tags">
-        <span class="tag accent">RAG Pipelines</span>
+        <span class="tag accent">Generative AI</span>
         <span class="tag accent">LLM Applications</span>
+        <span class="tag accent">RAG</span>
         <span class="tag accent">Text-to-SQL</span>
         <span class="tag accent">Prompt Engineering</span>
         <span class="tag accent">Conversational AI</span>
-        <span class="tag accent">Semantic Search</span>
+        <span class="tag accent">Semantic Routing</span>
+        <span class="tag accent">Agentic AI</span>
+        <span class="tag accent">LangGraph</span>
         <span class="tag accent">LangChain</span>
         <span class="tag accent">ChromaDB</span>
-        <span class="tag accent">Agentic AI</span>
+        <span class="tag accent">Groq</span>
       </div>
-      <h3>Machine Learning & Deep Learning</h3>
+
+      <h3>Backend &amp; APIs</h3>
       <div class="skill-tags">
-        <span class="tag teal">PyTorch</span>
-        <span class="tag teal">scikit-learn</span>
-        <span class="tag teal">XGBoost</span>
-        <span class="tag teal">CNN / ResNet</span>
-        <span class="tag teal">Transfer Learning</span>
-        <span class="tag teal">Feature Engineering</span>
-        <span class="tag teal">Hyperparameter Tuning</span>
-        <span class="tag teal">SMOTE / Imbalance</span>
-        <span class="tag teal">Statistical Analysis</span>
+        <span class="tag teal">Python</span>
+        <span class="tag teal">FastAPI</span>
+        <span class="tag teal">REST APIs</span>
+        <span class="tag teal">SQLAlchemy</span>
+        <span class="tag teal">Pydantic</span>
+        <span class="tag teal">Flask</span>
+        <span class="tag teal">JWT</span>
+        <span class="tag teal">OAuth2</span>
+        <span class="tag teal">OTP Authentication</span>
       </div>
-      <h3>Data & Deployment</h3>
+
+      <h3>Machine Learning &amp; Deep Learning</h3>
       <div class="skill-tags">
-        <span class="tag">Python</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Pandas / NumPy</span>
-        <span class="tag">Flask</span>
-        <span class="tag">Streamlit</span>
-        <span class="tag">FastAPI</span>
-        <span class="tag">MySQL / SQLite</span>
-        <span class="tag">Jupyter</span>
+        <span class="tag coral">scikit-learn</span>
+        <span class="tag coral">XGBoost</span>
+        <span class="tag coral">PyTorch</span>
+        <span class="tag coral">CNN / ResNet</span>
+        <span class="tag coral">Transfer Learning</span>
+        <span class="tag coral">Feature Engineering</span>
+        <span class="tag coral">Hyperparameter Tuning</span>
+        <span class="tag coral">SMOTE</span>
+        <span class="tag coral">Statistical Analysis</span>
+      </div>
+
+      <h3>Databases &amp; Data</h3>
+      <div class="skill-tags">
+        <span class="tag gold">PostgreSQL</span>
+        <span class="tag gold">MySQL</span>
+        <span class="tag gold">SQLite</span>
+        <span class="tag gold">SQL</span>
+        <span class="tag gold">Pandas</span>
+        <span class="tag gold">NumPy</span>
+        <span class="tag gold">EDA</span>
+        <span class="tag gold">Data Preprocessing</span>
+      </div>
+
+      <h3>Frontend, Cloud &amp; Tools</h3>
+      <div class="skill-tags">
+        <span class="tag slate">React</span>
+        <span class="tag slate">Vite</span>
+        <span class="tag slate">Streamlit</span>
+        <span class="tag slate">AWS EC2</span>
+        <span class="tag slate">Nginx</span>
+        <span class="tag slate">Gunicorn</span>
+        <span class="tag slate">Linux</span>
+        <span class="tag slate">Pytest</span>
+        <span class="tag slate">Git</span>
+        <span class="tag slate">GitHub</span>
       </div>
     </div>
   </div>
@@ -1011,43 +1063,36 @@
         Built an <strong>end-to-end machine learning pipeline</strong> to predict customer price range segments using demographic and behavioral data, including data cleaning, preprocessing, and feature engineering.
       </div>
     </li>
-
     <li>
       <div>
         Engineered <strong>meaningful features</strong> (customer behavior scores, income–zone interactions, brand-switch indicators) to improve model performance and capture real-world buying patterns.
       </div>
     </li>
-
     <li>
       <div>
         Trained and evaluated multiple models (<strong>XGBoost, Random Forest, LightGBM</strong>), applying hyperparameter tuning to select the best-performing model for accurate predictions.
       </div>
     </li>
-
     <li>
       <div>
         Developed and deployed a <strong>Streamlit application</strong> for real-time prediction, enabling stakeholders to make data-driven pricing and customer segmentation decisions.
       </div>
     </li>
-
     <li>
       <div>
         Performed <strong>end-to-end retail data analysis</strong> using Python (Pandas, Seaborn) by cleaning, transforming, and integrating multi-source datasets (sales, stores, products) to prepare high-quality data for analysis.
       </div>
     </li>
-
     <li>
       <div>
         Conducted <strong>exploratory data analysis and visualization</strong> to uncover patterns in sales performance, product pricing, and store distribution across cities and campaigns.
       </div>
     </li>
-
     <li>
       <div>
         Engineered key business metrics such as <strong>Incremental Revenue %</strong> and <strong>Sales Uplift</strong> to evaluate promotion effectiveness and compare campaign performance (e.g., Diwali vs Sankranti).
       </div>
     </li>
-
     <li>
       <div>
         Derived <strong>actionable insights</strong> by identifying high-performing products, stores, and promotional strategies, enabling data-driven decision-making and optimization of marketing efforts.
@@ -1115,9 +1160,7 @@
       </div>
       <div class="project-title">Agentic AI–Powered HR Management System</div>
       <p class="project-desc">
-        Building a production-ready Agentic AI HR Assistant designed to automate end-to-end HR operations using natural language. The system enables users to interact conversationally with an AI agent that autonomously executes tasks such as employee onboarding, leave management, meeting scheduling, and ticket resolution, reducing manual HR workload and improving operational efficiency.
-        The assistant leverages Agentic AI architecture, where the LLM intelligently selects and invokes MCP tools to perform multi-step workflows. These tools connect to modular service managers responsible for handling core HR functionalities such as employee records, leave processing, meeting coordination, and ticket tracking. This design allows the AI agent to orchestrate complex business workflows dynamically instead of relying on static rule-based automation.
-        To ensure scalability and maintainability, the system uses schema-driven APIs and service-layer architecture, enabling structured data validation, clean separation of business logic, and reusable components. Each workflow executes through well-defined schemas, ensuring consistency, reliability, and production-grade performance.
+        Building a production-ready Agentic AI HR Assistant designed to automate end-to-end HR operations using natural language. The system enables users to interact conversationally with an AI agent that autonomously executes tasks such as employee onboarding, leave management, meeting scheduling, and ticket resolution. The assistant leverages Agentic AI architecture, where the LLM intelligently selects and invokes MCP tools to perform multi-step workflows.
       </p>
       <div class="project-metrics">
         <span class="metric">MCP Tool Orchestration</span>
@@ -1132,43 +1175,104 @@
         <span class="stack-tag">SMTP</span>
         <span class="stack-tag">LLM Orchestration</span>
       </div>
+      <div class="project-link-container">
+        <a
+          href="https://github.com/manojaa2003/Agentic-AI-Powered-HR-Management-System"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-link"
+        >
+          View Source →
+        </a>
+      </div>
     </div>
 
-    <!-- E-COMMERCE ASSISTANT -->
-    <div class="project-card reveal">
-      <span class="project-type type-genai">✦ GenAI</span>
-      <div class="project-title">AI-Powered E-commerce Assistant</div>
+    <!-- AI SHOPMATE -->
+    <div class="project-card featured reveal">
+      <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <span class="project-type type-genai">✦ GenAI</span>
+        <span class="wip-badge">Production Deployed</span>
+      </div>
+
+      <div class="project-title">
+        AI ShopMate – Intelligent E-Commerce Shopping Assistant
+      </div>
+
       <p class="project-desc">
-        Multi-pipeline conversational assistant using semantic routing to direct queries to a RAG FAQ engine, 
-        a Text-to-SQL product search layer, or a fallback clarification agent. Supports multi-turn memory 
-        through session summarization.
+        A production-oriented AI shopping assistant that combines
+        <strong>LLM orchestration, LangGraph, semantic routing, RAG,
+        Text-to-SQL, conversational query rewriting, and persistent chat memory</strong>
+        to provide context-aware product discovery and grounded e-commerce assistance.
+        User queries are rewritten using conversational context and routed through
+        specialized AI workflows for product search, FAQ retrieval, general Q&A,
+        and fallback handling.
       </p>
+
+      <p class="project-desc">
+        Product discovery uses <strong>LLM-powered Text-to-SQL</strong> to translate
+        natural-language requests into read-only PostgreSQL queries, while
+        knowledge-based questions use <strong>ChromaDB vector retrieval with
+        Sentence Transformers</strong>. The platform is powered by a
+        <strong>FastAPI REST backend</strong> with JWT authentication, OTP
+        verification, bcrypt password hashing, and user-isolated conversation
+        history, with a <strong>React + Vite</strong> frontend for interactive
+        shopping conversations and product discovery.
+      </p>
+
+      <p class="project-desc">
+        The application is deployed using
+        <strong>AWS EC2, Gunicorn, Uvicorn, Nginx, PostgreSQL, and Vercel</strong>,
+        with automated backend testing using Pytest.
+      </p>
+
       <div class="project-metrics">
-        <span class="metric">↓ 45% data prep time</span>
-        <span class="metric">↓ 35–40% latency</span>
+        <span class="metric">17 automated tests</span>
+        <span class="metric">4 AI workflows</span>
+        <span class="metric">Production deployed</span>
       </div>
+
       <div class="project-stack">
-        <span class="stack-tag">RAG</span>
-        <span class="stack-tag">Text-to-SQL</span>
-        <span class="stack-tag">ChromaDB</span>
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">FastAPI</span>
+        <span class="stack-tag">LangGraph</span>
         <span class="stack-tag">LangChain</span>
-        <span class="stack-tag">Groq LLM</span>
-        <span class="stack-tag">SQLite</span>
-        <span class="stack-tag">Streamlit</span>
+        <span class="stack-tag">Groq</span>
+        <span class="stack-tag">RAG</span>
+        <span class="stack-tag">ChromaDB</span>
+        <span class="stack-tag">Text-to-SQL</span>
+        <span class="stack-tag">PostgreSQL</span>
+        <span class="stack-tag">React</span>
+        <span class="stack-tag">AWS EC2</span>
+        <span class="stack-tag">Nginx</span>
       </div>
-      <a href="https://github.com/manojaa2003/E-commerce-chatbot" target="_blank" class="project-link">View project →</a>
-      <a href="https://e-commerce-chatbot-ufitzfias3pqw948nqyzqk.streamlit.app/" target="_blank" class="project-link">Live Demo→</a>
 
+      <div class="project-link-container">
+        <a
+          href="https://github.com/manojaa2003/E-commerce-chatbot-2.0"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-link"
+        >
+          View Source →
+        </a>
+
+        <a
+          href="https://aishopmate.online"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-link"
+        >
+          Live Demo →
+        </a>
+      </div>
     </div>
-
     <!-- REAL ESTATE RAG -->
     <div class="project-card reveal">
       <span class="project-type type-genai">✦ GenAI</span>
       <div class="project-title">Real Estate Research Tool</div>
       <p class="project-desc">
         Domain-restricted RAG system for verified real estate journalism. Automates article ingestion, 
-        semantic chunking, and dense embedding generation. Responses grounded strictly in retrieved content — 
-        no hallucinations, sub-second retrieval.
+        semantic chunking, and dense embedding generation. Responses grounded strictly in retrieved content.
       </p>
       <div class="project-metrics">
         <span class="metric">↑ 30–35% answer accuracy</span>
@@ -1179,10 +1283,11 @@
         <span class="stack-tag">LangChain</span>
         <span class="stack-tag">ChromaDB</span>
         <span class="stack-tag">Groq LLM</span>
-        <span class="stack-tag">Streamlit</span>
       </div>
-      <a href="https://github.com/manojaa2003/GenAI_Research_Tool" target="_blank" class="project-link">View project →</a>
-      <a href="https://genairesearchtool-9ychimscjq2dzqryq2548p.streamlit.app/" target="_blank" class="project-link">Live Demo→</a>
+      <div class="project-link-container">
+        <a href="https://github.com/manojaa2003/GenAI_Research_Tool" target="_blank" class="project-link">View project →</a>
+        <a href="https://genairesearchtool-9ychimscjq2dzqryq2548p.streamlit.app/" target="_blank" class="project-link">Live Demo→</a>
+      </div>
     </div>
 
     <!-- CAR DAMAGE -->
@@ -1191,23 +1296,22 @@
       <div class="project-title">Car Damage Detection</div>
       <p class="project-desc">
         End-to-end computer vision pipeline for automated vehicle damage classification using ResNet50 
-        with transfer learning. Layer freezing, dropout tuning, and class-wise evaluation 
-        for robust real-world inference.
+        with transfer learning. Layer freezing, dropout tuning, and class-wise evaluation.
       </p>
       <div class="project-metrics">
         <span class="metric">↑ 28% accuracy</span>
-        <span class="metric">↑ 35% precision/recall</span>
-        <span class="metric">↓ 30 min/vehicle</span>
+        <span class="metric">↑ 35% precision</span>
       </div>
       <div class="project-stack">
         <span class="stack-tag">PyTorch</span>
         <span class="stack-tag">ResNet50</span>
-        <span class="stack-tag">Transfer Learning</span>
         <span class="stack-tag">CNN</span>
         <span class="stack-tag">Streamlit</span>
       </div>
-      <a href="https://github.com/manojaa2003/Car_Damage_Detection_DL" target="_blank" class="project-link">View project →</a>
-      <a href="https://cardamagedetectiondl-n8ahbk2jama9om5vyqqti7.streamlit.app/" target="_blank" class="project-link">Live Demo→</a>
+      <div class="project-link-container">
+        <a href="https://github.com/manojaa2003/Car_Damage_Detection_DL" target="_blank" class="project-link">View project →</a>
+        <a href="https://cardamagedetectiondl-n8ahbk2jama9om5vyqqti7.streamlit.app/" target="_blank" class="project-link">Live Demo→</a>
+      </div>
     </div>
 
     <!-- CREDIT RISK -->
@@ -1216,8 +1320,7 @@
       <div class="project-title">Credit Risk Prediction</div>
       <p class="project-desc">
         Multi-source credit pipeline predicting loan default probability. SMOTE-Tomek for severe class 
-        imbalance, Optuna for automated hyperparameter search. Deployed as a real-time Streamlit 
-        scoring tool for instant risk assessment.
+        imbalance, Optuna for automated hyperparameter search.
       </p>
       <div class="project-metrics">
         <span class="metric">↑ 26% accuracy</span>
@@ -1226,22 +1329,22 @@
       <div class="project-stack">
         <span class="stack-tag">XGBoost</span>
         <span class="stack-tag">LightGBM</span>
-        <span class="stack-tag">SMOTE-Tomek</span>
         <span class="stack-tag">Optuna</span>
         <span class="stack-tag">Streamlit</span>
       </div>
-      <a href="https://github.com/manojaa2003/ml-project-credit-risk-modeling" target="_blank" class="project-link">View project →</a>
-      <a href="https://ml-project-credit-risk-modeling-manoj.streamlit.app/" target="_blank" class="project-link">Live Demo→</a>
+      <div class="project-link-container">
+        <a href="https://github.com/manojaa2003/ml-project-credit-risk-modeling" target="_blank" class="project-link">View project →</a>
+        <a href="https://ml-project-credit-risk-modeling-manoj.streamlit.app/" target="_blank" class="project-link">Live Demo→</a>
+      </div>
     </div>
 
     <!-- INSURANCE -->
     <div class="project-card reveal">
       <span class="project-type type-ml">◉ Machine Learning</span>
-      <div class="project-title">Health Insurance Premium Prediction</div>
+      <div class="project-title">Insurance Premium Prediction</div>
       <p class="project-desc">
         End-to-end ML system estimating insurance premiums using demographic, lifestyle, and medical data. 
-        Cohort-based regression models with XGBoost achieved 98% accuracy. 
-        Deployed via Streamlit for real-time premium estimation.
+        Cohort-based regression models achieved 98% accuracy.
       </p>
       <div class="project-metrics">
         <span class="metric">73% → 98% accuracy</span>
@@ -1250,58 +1353,12 @@
       <div class="project-stack">
         <span class="stack-tag">XGBoost</span>
         <span class="stack-tag">GridSearchCV</span>
-        <span class="stack-tag">Scikit-learn</span>
         <span class="stack-tag">Flask</span>
-        <span class="stack-tag">Streamlit</span>
       </div>
-      <a href="https://github.com/manojaa2003/ml-project-premium-prediction" target="_blank" class="project-link">View project →</a>
-      <a href="https://ml-project-premium-prediction-manoj.streamlit.app/" target="_blank" class="project-link">Live Demo→</a>
-    </div>
-
-    <!-- CREDIT CARD -->
-    <div class="project-card reveal">
-      <span class="project-type type-stats">▲ Statistical Analysis</span>
-      <div class="project-title">Credit Card Launch Analysis</div>
-      <p class="project-desc">
-        A/B testing framework on 50K+ customer records to evaluate a new credit card variant. 
-        Z-test and proportion tests with SciPy to measure statistically significant uplift 
-        in spending behavior and support data-backed launch decisions.
-      </p>
-      <div class="project-metrics">
-        <span class="metric">50K+ records</span>
-        <span class="metric">↑ 66% faster evaluation</span>
+      <div class="project-link-container">
+        <a href="https://github.com/manojaa2003/ml-project-premium-prediction" target="_blank" class="project-link">View project →</a>
+        <a href="https://ml-project-premium-prediction-manoj.streamlit.app/" target="_blank" class="project-link">Live Demo→</a>
       </div>
-      <div class="project-stack">
-        <span class="stack-tag">Python</span>
-        <span class="stack-tag">SciPy</span>
-        <span class="stack-tag">Statsmodels</span>
-        <span class="stack-tag">A/B Testing</span>
-        <span class="stack-tag">Seaborn</span>
-      </div>
-      <a href="https://github.com/manojaa2003/Credit-Card-Launch-project" target="_blank" class="project-link">View project →</a>
-    </div>
-
-    <!-- EXPENSE TRACKER -->
-    <div class="project-card reveal">
-      <span class="project-type type-stats" style="background:rgba(150,150,200,0.1);color:#aaa;border-color:rgba(150,150,200,0.2);">⬡ Python App</span>
-      <div class="project-title">Expense Tracking System</div>
-      <p class="project-desc">
-        Full-stack expense manager with a modular architecture separating a Streamlit UI from a 
-        FastAPI backend. CRUD operations, business logic enforcement, Pandas-powered analytics, 
-        and comprehensive test coverage for both layers.
-      </p>
-      <div class="project-metrics">
-        <span class="metric">↓ 45% tracking effort</span>
-        <span class="metric">↑ 40% data clarity</span>
-      </div>
-      <div class="project-stack">
-        <span class="stack-tag">FastAPI</span>
-        <span class="stack-tag">Streamlit</span>
-        <span class="stack-tag">MySQL</span>
-        <span class="stack-tag">Pandas</span>
-        <span class="stack-tag">REST API</span>
-      </div>
-      <a href="https://github.com/manojaa2003/Expense_Tracking_System" target="_blank" class="project-link">View project →</a>
     </div>
 
   </div>
@@ -1313,63 +1370,51 @@
   <h2 class="section-title">Credentials</h2>
   <div class="certs-grid reveal">
      <a href="https://codebasics.io/certificate/image/CB-90-538004" target="_blank" class="cert-card">
-      <div class="cert-card">
       <div class="cert-icon" style="background:rgba(255,107,107,0.1);">🧠</div>
       <div>
         <div class="cert-issuer">Codebasics</div>
         <div class="cert-name">Gen AI to Agentic AI with Business Projects</div>
       </div>
-    </div>
     </a>
 
     <a href="https://codebasics.io/certificate/image/CB-69-538004" target="_blank" class="cert-card">
-       <div class="cert-card">
-        <div class="cert-icon" style="background:rgba(255,107,107,0.1);">📊</div>
-          <div>
-            <div class="cert-issuer">Codebasics</div>
-            <div class="cert-name">Machine Learning for Data Science & AI</div>
-          </div>
+      <div class="cert-icon" style="background:rgba(255,107,107,0.1);">📊</div>
+      <div>
+        <div class="cert-issuer">Codebasics</div>
+        <div class="cert-name">Machine Learning for Data Science & AI</div>
       </div>
     </a>
      
     <a href="https://codebasics.io/certificate/image/CB-85-538004" target="_blank" class="cert-card">
-      <div class="cert-card">
       <div class="cert-icon" style="background:rgba(124,107,255,0.1);">🤖</div>
       <div>
         <div class="cert-issuer">Codebasics</div>
         <div class="cert-name">Deep Learning Foundations</div>
       </div>
-    </div>
     </a>
     
     <a href="https://codebasics.io/certificate/image/CB-63-538004" target="_blank" class="cert-card">
-      <div class="cert-card">
       <div class="cert-icon" style="background:rgba(255,107,107,0.1);">📊</div>
       <div>
         <div class="cert-issuer">Codebasics</div>
         <div class="cert-name">Math and Statistics For AI, Data Science</div>
       </div>
-    </div>
     </a>
     
     <a href="https://www.coursera.org/account/accomplishments/certificate/VRW6E9OC6QG1" target="_blank" class="cert-card">
-      <div class="cert-card">
       <div class="cert-icon" style="background:rgba(0,120,200,0.12);">🔷</div>
       <div>
         <div class="cert-issuer">IBM</div>
         <div class="cert-name">Databases and SQL for Data Science with Python</div>
       </div>
-    </div>
     </a>
    
     <a href="https://www.coursera.org/account/accomplishments/certificate/L95PCPSX979M" target="_blank" class="cert-card">
-      <div class="cert-card">
       <div class="cert-icon" style="background:rgba(0,120,200,0.12);">🐍</div>
       <div>
         <div class="cert-issuer">IBM</div>
         <div class="cert-name">Python for Data Science, AI and Development</div>
       </div>
-    </div>
     </a>
   </div>
 </section>
@@ -1385,6 +1430,7 @@
       <div class="edu-uni">
         <strong>Mangalore Institute of Technology & Engineering</strong>
         <span style="font-weight: 400; opacity: 0.6;"> — Visvesvaraya Technological University</span>
+      </div>
       <div class="edu-meta">
         <span class="edu-pill gpa">CGPA: 8.23</span>
         <span class="edu-pill">Nov 2021 – May 2025</span>
@@ -1403,7 +1449,7 @@
       If you're building something that needs reliable AI systems, let's talk.
     </p>
     <div class="contact-links">
-      <a href="mailto:aamanoj743@gmail.com," class="btn-primary">↗ Get in touch</a>
+      <a href="mailto:aamanoj743@gmail.com" class="btn-primary">↗ Get in touch</a>
       <a href="tel:+918310654643" class="contact-link">
         ☎ +91 83106 54643
       </a>
@@ -1453,3 +1499,5 @@
   window.addEventListener('scroll', checkReveals, { passive: true });
   window.addEventListener('load', checkReveals);
 </script>
+</body>
+</html>
